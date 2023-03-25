@@ -1,6 +1,5 @@
 package kodlama.io.rentacar;
 
-import kodlama.io.rentacar.repository.abstracts.BrandRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
