@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 //Lombok
 @Entity
 @Setter
@@ -18,6 +20,8 @@ public class Brand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
    // @Column(name = "test")
-    private String name;
+    @OneToMany(mappedBy = "brand")
+   // @JsonBackReference
+    private List<Model> models;
 
 }
