@@ -11,19 +11,24 @@ import java.time.LocalDateTime;
 @Entity
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "rental_cars")
-public class Rental {
+@NoArgsConstructor
+@Table(name = "invoices")
+public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String cardHolder;
+    private String modelName;
+    private String brandName;
+    private String plate;
+    private int modelYear;
     private double dailyPrice;
+    private double totalPrice;
     private int rentedForDays;
-    private double totalPrice;//readOnly
-    private LocalDateTime startDate;
-    @ManyToOne
-    @JoinColumn(name = "car_id")
-    private Car car;
+    private LocalDateTime rentedAt;
 
+    // @OneToOne//unidiretional -> tek yönlü
+
+    //private Rental rental;
 }

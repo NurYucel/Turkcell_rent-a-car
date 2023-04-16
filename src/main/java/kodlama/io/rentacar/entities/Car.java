@@ -25,7 +25,7 @@ public class Car {
     @Enumerated(EnumType.STRING)
     private State state;//available,rented,maintance
     @ManyToOne
-  //  @JsonManagedReference
+    //  @JsonManagedReference
     private Model model;//modelId
     @OneToMany(mappedBy = "car")
     private List<Maintenance> maintenances;

@@ -19,9 +19,9 @@ public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-   // @Column(name = "test")
+    // @Column(name = "test")
     @OneToMany(mappedBy = "brand")
-   // @JsonBackReference
+    // @JsonBackReference
     private List<Model> models;
 
 }

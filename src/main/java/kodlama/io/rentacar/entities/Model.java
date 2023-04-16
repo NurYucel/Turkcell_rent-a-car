@@ -20,10 +20,10 @@ public class Model {
     private int id;
     private String name;
     @ManyToOne
-   // @JsonManagedReference
+    // @JsonManagedReference
     //@JoinColumn(name = "brand_id")
     private Brand brand; //brandId
     @OneToMany(mappedBy = "model")
-   // @JsonBackReference
+    // @JsonBackReference
     private List<Car> cars;
 }

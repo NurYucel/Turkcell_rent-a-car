@@ -20,18 +20,18 @@ public class RentalController {
     private final RentalService service;
 
     @GetMapping
-    public List<GetAllRentalsResponse> getAll(){
+    public List<GetAllRentalsResponse> getAll() {
         return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public GetRentalResponse getById(@PathVariable int id){
+    public GetRentalResponse getById(@PathVariable int id) {
         return service.getById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CreateRentalResponse add(@RequestBody CreateRentalRequest request){
+    public CreateRentalResponse add(@RequestBody CreateRentalRequest request) {
         return service.add(request);
     }
 
@@ -43,7 +43,7 @@ public class RentalController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable int id){
+    public void delete(@PathVariable int id) {
         service.delete(id);
     }
 }

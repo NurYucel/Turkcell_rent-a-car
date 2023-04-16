@@ -30,6 +30,6 @@ public class PaymentRequest {//Base/Super class
     @Max(value = 12)
     private int cardExpirationMonth;
     @NotBlank
-    @Length(min = 3,max = 3)
+    @Length(min = 3, max = 3)
     private String cardCvv;
 }
